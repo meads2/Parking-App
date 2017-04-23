@@ -1,0 +1,205 @@
+// ---------------------
+//  Imports & Variables
+// ---------------------
+@import url('https://fonts.googleapis.com/css?family=Oswald:700')
+$blue: #1E90F0
+$red: #F01E61
+
+// ---------------------
+//       Master Styles
+// ---------------------
+body,html
+  width: 100%
+  height: 100vh
+  font-family: 'Helvetica', sans-serif
+
+// ---------------------
+//       Globals
+// ---------------------
+*
+  box-sizing: border-box
+  line-height: 24px
+  color: #333
+
+// ---------------------
+//      Google Map
+// ---------------------
+#map
+  width: 100%
+  height: 100%
+
+// ---------------------
+//       Sidebar
+// ---------------------
+.sb
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  width: 320px
+  height: 100%
+  z-index: 10
+  background: #fff
+  box-shadow: 2px 0 24px rgba(black, .1), 1px 0 8px rgba(black, .18)
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  overflow: hidden
+
+.sb-header
+  img
+    width: 100%
+    height: auto
+
+.sb-content
+  position: relative
+  flex: 1
+.one
+  z-index: 15
+.two
+  z-index: 13
+.three
+  z-index: 11
+.is-hidden
+  display: none !important
+
+.card
+  position: absolute
+  top: 0
+  bottom: 0
+  height: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 32px
+  background: #fff
+.title
+  font-size: 48px
+  line-height: 48px
+  color: #333
+  font-family: 'Oswald', sans-serif
+  letter-spacing: -.5px
+  margin-bottom: 24px
+.more
+  font-size: 15px
+  line-height: 24px
+  font-family: 'Helvetica', sans-serif
+  margin-bottom: 24px
+  font-weight: 300
+.btn-primary
+  background: $blue
+  padding: 16px 48px
+  color: #fff
+  font-size: 14px
+  border-radius: 4px
+  &:hover
+    background: darken($blue, 10%)
+    cursor: pointer
+.btn-sub
+  margin-top: 8px
+  font-size: 10px
+  text-decoration: underline
+  color: rgba(black,.2)
+  &:hover
+    cursor: pointer
+.sb-toolbar
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 100%
+  .btn-primary
+    padding: 14px 56px
+    border-radius: 2px
+    color: #fff
+    background: #1E90EF
+    font-size: 13px
+    &:hover
+      cursor: pointer
+      background: darken(#1E90EF, 5%)
+  .btn-sub
+    font-size: 10px
+    color: rgb(180,193,203)
+    text-decoration: underline
+    margin-top: 8px
+    margin-bottom: 16px
+    &:hover
+      cursor: pointer
+      color: darken(rgb(180,193,203), 5%)
+  .pagination
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 40px
+    margin: 16px 0
+    .dot
+      width: 7px
+      height: 7px
+      border-radius: 50%
+      background: transparentize(#1E90EF, .7)
+    .active
+      background: #1E90EF
+.sb-footer
+  height: 50px
+  border-top: 1px solid #E3E6EA
+  display: flex
+  align-items: center
+  justify-content: center
+  p
+    font-size: 10px
+    color: rgba(black, .4)
+
+// ---------------------
+//  Map Markers & Menus
+// ---------------------
+.dott
+  width: 150px
+  height: 150px
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+.dot-mk
+  position: absolute
+  z-index: 5
+  width: 10px
+  height: 10px
+  border-radius: 50%
+  transform-origin: center
+  animation: pulse 2200ms infinite ease-in-out
+.pulse-sm
+  animation: pulse-sm 2200ms infinite ease-in-out !important
+
+.mark
+  display: block
+  z-index: 10
+  position: absolute
+  content: ''
+  width: 10px
+  height: 10px
+  border-radius: 50%
+  font-size: 10px
+  box-shadow: 0 2px 6px rgba(black,.2)
+.red
+  background: $red
+.blue
+  background: $blue
+
+// ---------------------
+//        Animations
+// ---------------------
+@keyframes pulse
+  0%
+    opacity: .6
+  100%
+    width: 110px
+    height: 110px
+    opacity: 0
+
+@keyframes pulse-sm
+  0%
+    opacity: .6
+  100%
+    width: 60px
+    height: 60px
+    opacity: 0
