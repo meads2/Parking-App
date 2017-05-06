@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
     <!-- Animate css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+    <!-- Ionic Icons-->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Custom Styles-->
     <link rel="stylesheet" href="../styles/main.css">
   </head>
@@ -37,6 +39,15 @@
         <p>&copy; 2017. FakeParkingApp</p>
       </div>
     </div>
+    <!-- Directions-->
+    <!-- include partials/directions-->
+    <!-- Dashboard-->
+    <div class="sb dashboard">
+      <div class="sb-header">
+        <h1>Parking Dashboard</h1>
+      </div>
+      <ul id="lots"></ul>
+    </div>
     <!-- Map-->
     <div id="map"></div>
     <!-- Scripts-->
@@ -46,9 +57,7 @@
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <!-- GMAPS JQuery Wrapper-->
     <script src="../js/gmaps.js"></script>
-    <!-- Working -APP.JS-->
-    <!-- script(src='../js/overlay.js')-->
-    <!-- Attempt At Modular JS-->
+    <!-- App Module JS-->
     <script src="../js/module-test.js"></script>
   </body>
 </html>
