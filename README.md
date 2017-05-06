@@ -1,5 +1,5 @@
 # Demo Site
-[Parking App](demonic-cattle.surge.sh)
+[Parking App](http://demonic-cattle.surge.sh/)
 
 # Parking App
 A JQuery app that consumes a [Philadelphia Parking API](http://phlapi.com/airportparking.html)
